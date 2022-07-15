@@ -36,14 +36,14 @@ import os
 #     bot_token=bot_token)
 
 bot = Client(
-    "bot",
-    bot_token=os.environ.get("BOT_TOKEN"),
-    api_id=int(os.environ.get("API_ID")),
-    api_hash=os.environ.get("API_HASH")
+    "CW",
+    bot_token=("1961237776:AAF5ERVEgXV-kbKeEucKEInRUfld7Tu6X-M"),
+    api_id=("7044734"),
+    api_hash=("3042441d631955272db1358e1d37fefb")
 )
-auth_users = [ int(chat) for chat in os.environ.get("AUTH_USERS").split(",") if chat != '']
+auth_users = [ (chat) for chat in os.environ.get("1849310921").split(",") if chat != '']
 sudo_users = auth_users
-sudo_groups = [ int(chat) for chat in os.environ.get("GROUPS").split(",")  if chat != '']
+sudo_groups = [ (chat) for chat in os.environ.get("-1001738890030").split(",")  if chat != '']
 
 @bot.on_message(filters.command(["start"])& ~filters.edited & (filters.chat(sudo_groups)))
 async def account_login(bot: Client, m: Message):
