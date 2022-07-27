@@ -36,10 +36,10 @@ import os
 #     bot_token=bot_token)
 
 bot = Client(
-    "CW",
-    bot_token=("1961237776:AAF5ERVEgXV-kbKeEucKEInRUfld7Tu6X-M"),
-    api_id=("7044734"),
-    api_hash=("3042441d631955272db1358e1d37fefb")
+    "bot",
+    bot_token=os.environ.get("BOT_TOKEN", "1961237776:AAF5ERVEgXV-kbKeEucKEInRUfld7Tu6X-M")
+    api_id=int(os.environ.get("API_ID"),"7044734")
+    api_hash=os.environ.get("API_HASH", "3042441d631955272db1358e1d37fefb")
 )
 auth_users = [ (chat) for chat in os.environ.get("1849310921").split(",") if chat != '']
 sudo_users = auth_users
