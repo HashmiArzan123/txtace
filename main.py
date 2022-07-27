@@ -29,18 +29,18 @@ import os
 # import pycurl
 
 
-# bot = Client(
-#     "bot",
-#     api_id=api_id,
-#     api_hash=api_hash,
-#     bot_token=bot_token)
-
 bot = Client(
     "bot",
-    bot_token=os.environ.get("BOT_TOKEN", "1961237776:AAF5ERVEgXV-kbKeEucKEInRUfld7Tu6X-M")
-    api_id=os.environ.get("API_ID","7044734")
-    api_hash=os.environ.get("API_HASH", "3042441d631955272db1358e1d37fefb")
-)
+    api_id=api_id,
+    api_hash=api_hash,
+    bot_token=bot_token)
+
+#bot = Client(
+#    "bot",
+#    bot_token=os.environ.get("BOT_TOKEN", "1961237776:AAF5ERVEgXV-kbKeEucKEInRUfld7Tu6X-M")
+#    api_id=os.environ.get("API_ID","7044734")
+#    api_hash=os.environ.get("API_HASH", "3042441d631955272db1358e1d37fefb")
+#)
 auth_users = [ int(chat) for chat in os.environ.get("AUTH_USERS","5117136039").split(",") if chat != '']
 sudo_users = auth_users
 sudo_groups = [ int(chat) for chat in os.environ.get("GROUPS","-1001738890030").split(",")  if chat != '']
