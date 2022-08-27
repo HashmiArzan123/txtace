@@ -43,7 +43,7 @@ bot = Client(
 #)
 auth_users = [ int(chat) for chat in os.environ.get("AUTH_USERS","1849310921,323290040,5247871879").split(",") if chat != '']
 sudo_users = auth_users
-sudo_groups = [ int(chat) for chat in os.environ.get("GROUPS","-1001738890030,-1001687790644").split(",")  if chat != '']
+sudo_groups = [ int(chat) for chat in os.environ.get("GROUPS","-1001738890030,-1001687790644,-1001359437465").split(",")  if chat != '']
 @bot.on_message(filters.command(["start"])& ~filters.edited & (filters.chat(sudo_groups)))
 async def account_login(bot: Client, m: Message):
     user = m.from_user.id if m.from_user is not None else None
