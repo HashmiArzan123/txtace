@@ -364,14 +364,14 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(3)
                     except FloodWait as e:
                         await m.reply_text(str(e))
-                        time.sleep(e.x)
+                        time.sleep(e.x+1)
                         continue
                 else:
                     res_file = await helper.download_video(url,cmd, name)
                     filename = res_file
                     await helper.send_vid(bot, m,cc,filename,thumb,name,prog)
                     count+=1
-                    time.sleep(1)
+                    time.sleep(2)
 
             except Exception as e:
                 await m.reply_text(f"**downloading failed ❌**\n{str(e)}\n**Name** - {name}\n**Link** - `{url}`")
