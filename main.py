@@ -37,9 +37,9 @@ bot = Client(
 
 #bot = Client(
 #    "bot",
-#    bot_token=os.environ.get("BOT_TOKEN", "1961237776:AAF5ERVEgXV-kbKeEucKEInRUfld7Tu6X-M")
-#    api_id=os.environ.get("API_ID","7044734")
-#    api_hash=os.environ.get("API_HASH", "3042441d631955272db1358e1d37fefb")
+#    bot_token=os.environ.get("BOT_TOKEN", "6788963844:AAE3i_YAwWLnNnxyMPB1beo4V4R-Xu5hhzU")
+#    api_id=os.environ.get("API_ID","26368249")
+#    api_hash=os.environ.get("API_HASH", "ac2db262d5eb7ce0efc0162404c8d172")
 #)
 auth_users = [ int(chat) for chat in os.environ.get("AUTH_USERS",1318247204,6004318404,1511103739,5986734743).split(",") if chat != '']
 sudo_users = auth_users
